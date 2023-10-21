@@ -44,6 +44,7 @@ import _ from 'lodash'
         answered: false
       }
     },
+    // Putting the answers together and returning the shuffled Answer
     computed: {
       answers(){
         const answers = [...this.currentQuestion.incorrect_answers]
@@ -51,6 +52,7 @@ import _ from 'lodash'
         return this.shuffledAnswers
       }
     },
+    // A watcher to check changes in the Current Question
     watch: {
       currentQuestion: {
         immediate: true,
